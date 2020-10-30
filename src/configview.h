@@ -14,6 +14,7 @@ class ConfigView : public QObject
     Q_OBJECT
 public:
     explicit ConfigView(QQuickView *parent = 0);
+    bool eventFilter(QObject *object, QEvent *event);\
 
 public slots:
     void setColor(qreal red, qreal green, qreal blue, qreal opacity);
